@@ -1,15 +1,3 @@
-
-var knex = require('knex')({
-    client: 'mysql',
-    connection: {
-        host: mysql_endpoint,
-        user: 'jstaff',
-        password: 'Alba!#78',
-        database: 'parkhog',
-        port:     '3306'     
-    }
-  });
-
 exports.up = function(knex, Promise) {
     return Promise.all([
         knex.schema.createTable('licensePlates', function (table) {
